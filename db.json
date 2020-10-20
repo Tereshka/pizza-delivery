@@ -121,7 +121,7 @@
   "pizza_list": [
     {
       "id": 1,
-      "image": "./assets/img/ham_cheese.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/ham_cheese.jpg",
       "name": "Ham and cheese",
       "description": "30 cm, traditional dough, 500 g",
       "ingredients": "Ham, mozzarella oversized, alfredo sauce",
@@ -131,7 +131,7 @@
     },
     {
       "id": 2,
-      "image": "./assets/img/cheese.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/cheese.jpg",
       "name": "Cheese",
       "description": "30 cm, traditional dough, 530 g",
       "ingredients": "Large portion of mozzarella, tomato sauce",
@@ -141,7 +141,7 @@
     },
     {
       "id": 3,
-      "image": "./assets/img/pepperoni.jpeg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/pepperoni.jpeg",
       "name": "Pepperoni",
       "description": "30 cm, traditional dough, 570 g",
       "ingredients": "Spicy pepperoni, large portion of mozzarella, tomato sauce",
@@ -151,7 +151,7 @@
     },
     {
       "id": 4,
-      "image": "./assets/img/hawaiian.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/hawaiian.jpg",
       "name": "Hawaiian",
       "description": "30 cm, traditional dough, 650 g",
       "ingredients": "Chicken, tomato sauce, mozzarella, pineapple",
@@ -161,7 +161,7 @@
     },
     {
       "id": 5,
-      "image": "./assets/img/margarita.jpeg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/margarita.jpeg",
       "name": "Margarita",
       "description": "30 cm, traditional dough, 620 g",
       "ingredients": "Large portion of mozzarella, tomatoes, Italian herbs, tomato sauce",
@@ -171,7 +171,7 @@
     },
     {
       "id": 6,
-      "image": "./assets/img/meaty.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/meaty.jpg",
       "name": "Meaty",
       "description": "30 cm, traditional dough, 600 g",
       "ingredients": "Chicken, ham, spicy pepperoni, tomato sauce, spicy chorizo, mozzarella",
@@ -181,7 +181,7 @@
     },
     {
       "id": 7,
-      "image": "./assets/img/four_seasons.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/four_seasons.jpg",
       "name": "Four Seasons",
       "description": "30 cm, thin crust, 530 g",
       "ingredients": "Increased portion of mozzarella, ham, spicy pepperoni, cheese cubes, tomatoes, mushrooms, tomato sauce, Italian herbs",
@@ -191,7 +191,7 @@
     },
     {
       "id": 8,
-      "image": "./assets/img/mexican.jpg",
+      "image": "https://github.com/tereshka/pizza-delivery/blob/master/src/assets/img/mexican.jpg",
       "name": "Mexican",
       "description": "30 cm, traditional dough, 710 g",
       "ingredients": "Spicy chicken, tomato sauce, bell peppers, red onion, mozzarella, hot jalapeno peppers, tomatoes, salsa sauce",

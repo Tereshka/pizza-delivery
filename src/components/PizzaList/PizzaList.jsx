@@ -1,20 +1,17 @@
-import React, {useContext, useEffect} from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Context } from '../../context/Context';
 import { SET_CATALOGUE } from '../../context/types';
 import api from '../../api/api';
 
-import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
 import PizzaCard from './PizzaCard.jsx';
 
 function PizzaList() {
   const { state, dispatch } = useContext(Context);
+  const { catalogue } = state;
 
   const loadCatalogue = () => {
-    console.log('load');
-  
     api.get('/pizza_list').then(data => {
-      console.log(data);
-      
       dispatch({
         type: SET_CATALOGUE,
         payload: data,
@@ -23,20 +20,21 @@ function PizzaList() {
   };
 
   useEffect(() => {
-    if (state.catalogue.length === 0) {
-      console.log('loading')
+    if (catalogue.length === 0) {
       loadCatalogue();
     }
   }, []);
 
   return (
-    <Container>
+    <Grid container spacing={3}>
       {
-        state.catalogue.map(el => (
-          <PizzaCard pizza={el} key={`pizza-${el.id}`} />
+        catalogue.map(el => (
+          <Grid  key={`pizza-${el.id}`} item xs={12} sm={6} md={4} lg={3} >
+            <PizzaCard pizza={el} />
+          </Grid>
         ))
       }
-    </Container>
+    </Grid>
   );
 };
 
