@@ -26,8 +26,10 @@ const api = {
   get(url) {
     return fetchApi(`${API_URL}${url}`, {
       mode: 'cors',
+      credentials: "include",
       headers: {
         'Content-type': 'application/json',
+        
       },
     });
   },

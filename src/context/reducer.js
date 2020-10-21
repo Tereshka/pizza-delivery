@@ -1,14 +1,23 @@
 import * as types from './types.js';
 
 export const CURRENCY = {
-  RUB: '₽',
-  USD: '$',
-  EUR: '€',
+  RUB: {
+    name: 'RUB',
+    sign: '₽',
+  },
+  USD: {
+    name: 'USD',
+    sign: '$',
+  },
+  EUR: {
+    name: 'EUR',
+    sign: '€',
+  },
 };
 
 export const initialState = {
   catalogue: [],
-  currency: CURRENCY.RUB,
+  currency: CURRENCY.USD,
   user: null,
   delivery_cost: {},
   order: [],
@@ -24,6 +33,7 @@ export function reducer(state, action) {
         catalogue: payload,
       };
     }
+
     case types.ADD_TO_ORDER: {
       const order = [...state.order];
       const {pizza_id, price_RUB, price_USD, price_EUR} = payload;
@@ -34,20 +44,27 @@ export function reducer(state, action) {
         price_USD,
         price_EUR,
       });
-
       return {
         ...state,
         order,
-      }
+      };
     }
+
     case types.REMOVE_FROM_ORDER: {
       const order = [...state.order].filter(el => el.pizza_id !== payload);
-
       return {
         ...state,
         order,
-      }
+      };
     }
+    
+    case types.UPDATE_CURRENCY: {
+      return {
+        ...state,
+        currency: payload,
+      };
+    }
+
     default:
       return state;
   }

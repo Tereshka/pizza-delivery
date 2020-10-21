@@ -1,17 +1,19 @@
 import React, { useContext } from 'react';
-
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardMedia from '@material-ui/core/CardMedia';
-import CardContent from '@material-ui/core/CardContent';
-import Typography from '@material-ui/core/Typography';
-import IconButton from '@material-ui/core/IconButton';
-import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
-
 import { Context } from '../../context/Context';
 import { CURRENCY } from '../../context/reducer';
 import { ADD_TO_ORDER, REMOVE_FROM_ORDER } from '../../context/types';
+
+import {
+  Card,
+  CardHeader,
+  CardMedia,
+  CardContent,
+  Typography,
+  IconButton,
+} from '@material-ui/core';
+
+import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
 function PizzaCard(props) {
   const { state, dispatch } = useContext(Context);
@@ -23,12 +25,25 @@ function PizzaCard(props) {
     : currency === CURRENCY.USD
       ? price_USD : price_EUR;
 
+  function cardTitle() {
+    return (
+      <>
+        <Typography variant="h6" style={{ fontWeight: 'bold' }} component="span">
+          {`${name}, `}
+        </Typography>
+        <Typography variant="h6" color="primary" component="span">
+          {`${currentCurrency}${currency.sign}`}
+        </Typography>
+      </>
+    );
+  }
+
   function cartIcon() {
     const inCart = order.find(el => el.pizza_id === id);
     if (inCart) {
       return (
         <IconButton aria-label="remove from cart" onClick={removeFromOrder}>
-          <ShoppingCartIcon />
+          <ShoppingCartIcon color="primary" />
         </IconButton>);
     }
     return (
@@ -59,13 +74,14 @@ function PizzaCard(props) {
   return (
     <Card>
       <CardHeader
-        title={name}
+        title={cardTitle()}
         subheader={description}
         action={
           cartIcon()
         }
       />
       <CardMedia
+        style={{paddingTop: '50%'}}
         // className={classes.media}
         image={image}
         title={name}
@@ -74,9 +90,7 @@ function PizzaCard(props) {
         <Typography variant="body2" color="textSecondary" component="p">
           {ingredients}
         </Typography>
-        <Typography variant="body1" color="textPrimary" component="p">
-          {`${currentCurrency}${currency}`}
-        </Typography>
+        
       </CardContent>
     </Card>
   );
