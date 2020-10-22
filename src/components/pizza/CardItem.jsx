@@ -15,7 +15,7 @@ import {
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 
-function PizzaCard(props) {
+function CardItem(props) {
   const { state, dispatch } = useContext(Context);
   const {currency, order} = state;
   const { id, name, description, image, ingredients, price_RUB, price_USD, price_EUR } = props.pizza;
@@ -90,10 +90,9 @@ function PizzaCard(props) {
         <Typography variant="body2" color="textSecondary" component="p">
           {ingredients}
         </Typography>
-        
       </CardContent>
     </Card>
   );
 };
 
-export default PizzaCard;
+export default CardItem;

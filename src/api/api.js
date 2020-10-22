@@ -27,7 +27,6 @@ const api = {
     return fetchApi(`${API_URL}${url}`, {
       mode: 'cors',
       credentials: "include",
-      SameSite: "none Secure",
       headers: {
         'Content-type': 'application/json',
         

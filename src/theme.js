@@ -3,6 +3,7 @@ import deepPurple from '@material-ui/core/colors/deepPurple';
 import amber from '@material-ui/core/colors/amber';
 
 const theme = createMuiTheme({
+  spacing: 8,
   palette: {
     primary: {
       main: deepPurple[500],

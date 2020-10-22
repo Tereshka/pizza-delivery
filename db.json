@@ -141,7 +141,7 @@
     },
     {
       "id": 3,
-      "image": "https://raw.githubusercontent.com/tereshka/pizza-delivery/main/src/assets/img/pepperoni.jpeg",
+      "image": "https://raw.githubusercontent.com/tereshka/pizza-delivery/main/src/assets/img/pepperoni.jpg",
       "name": "Pepperoni",
       "description": "30 cm, traditional dough, 570 g",
       "ingredients": "Spicy pepperoni, large portion of mozzarella, tomato sauce",
@@ -161,7 +161,7 @@
     },
     {
       "id": 5,
-      "image": "https://raw.githubusercontent.com/tereshka/pizza-delivery/main/src/assets/img/margarita.jpeg",
+      "image": "https://raw.githubusercontent.com/tereshka/pizza-delivery/main/src/assets/img/margarita.jpg",
       "name": "Margarita",
       "description": "30 cm, traditional dough, 620 g",
       "ingredients": "Large portion of mozzarella, tomatoes, Italian herbs, tomato sauce",
